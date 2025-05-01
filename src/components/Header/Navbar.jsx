@@ -3,13 +3,15 @@ import './Navbar.css';
 const Navbar = () => {
 
     return (
-        <nav>
-            <ul>
+        <div>
+            <nav className='usr2'>
+                {/* <span>My webpage</span> */}
                 <Link to='/'>Home</Link>
                 <Link to='/about'>About</Link>
                 <Link to='/contact'>Contact</Link>
-            </ul>
-        </nav>
+                <Link to='/users'>Users</Link>
+            </nav>
+        </div>
     );
 };
 
