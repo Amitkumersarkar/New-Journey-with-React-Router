@@ -5,20 +5,27 @@ import {
   RouterProvider,
 } from "react-router-dom";
 import './index.css'
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Contact from './components/Contact/Contact';
+
 const router = createBrowserRouter([
+  // create an parent route that have multiple children route
   {
     path: "/",
-    element: <div>Hello programmer..!!</div>,
+    element: <Home></Home>,
+    children: [
+      {
+        path: '/about',
+        element: <About></About>,
+      },
+      {
+        path: '/contact',
+        element: <Contact></Contact>,
+      },
+    ]
   },
-  // create multiple route
-  {
-    path: '/Home',
-    element: <div>This a home page</div>,
-  },
-  {
-    path: '/about',
-    element: <div>This is a about page</div>
-  },
+
 
 ]);
 createRoot(document.getElementById('root')).render(
