@@ -12,7 +12,7 @@ const User = ({ user }) => {
             <Link to={`/user/${id}`}>
                 <button>Click Me</button>
             </Link>
-        </div>
+        </div>  
     );
 };
 
